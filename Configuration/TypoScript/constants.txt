@@ -1,0 +1,14 @@
+plugin.tx_akaccordion {
+	view {
+		# cat=plugin.tx_akaccordion/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:ak_accordion/Resources/Private/Templates/
+		# cat=plugin.tx_akaccordion/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:ak_accordion/Resources/Private/Partials/
+		# cat=plugin.tx_akaccordion/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:ak_accordion/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_akaccordion//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

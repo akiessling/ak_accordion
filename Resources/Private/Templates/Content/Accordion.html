@@ -1,0 +1,13 @@
+<div class="accordion">
+	<f:for each="{content.rows}" as="row">
+		<h3>{row.head}</h3>
+		<div>
+			<f:if condition="{row.image}">
+				<div style="float: left; padding-right: 10px;">
+					<f:image src="uploads/tx_akaccordion/{row.image}" alt="" maxWidth="160" maxHeight="80" />
+				</div>
+			</f:if>
+			<f:format.nl2br>{row.bodytext}</f:format.nl2br>
+		</div>
+	</f:for>
+</div>

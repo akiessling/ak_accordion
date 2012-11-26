@@ -1,0 +1,63 @@
+plugin.tx_akaccordion {
+	view {
+		templateRootPath = {$plugin.tx_akaccordion.view.templateRootPath}
+		partialRootPath = {$plugin.tx_akaccordion.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_akaccordion.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_akaccordion.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	persistence {
+		classes {
+			AK\AkAccordion\Domain\Model\TtContent {
+				subclasses {
+					akaccordion_accordion = AK\AkAccordion\Domain\Model\Plugins\Accordion
+				}
+			}
+			AK\AkAccordion\Domain\Model\Plugins\Accordion {
+				mapping {
+					recordType = akaccordion_accordion
+					tableName = tt_content
+					columns {
+						tx_akaccordion_accordion_content.mapOnProperty = rows
+					}
+				}
+			}
+		}
+	}
+}
+
+config.tx_extbase.persistence.classes {
+	AK\AkAccordion\Domain\Model\TtContent {
+		mapping {
+			tableName = tt_content
+			columns {
+				altText.mapOnProperty = altText
+				titleText.mapOnProperty = titleText
+				colPos.mapOnProperty = colPos
+			}
+		}
+	}
+}
+
+page.includeCSS {
+	jQueryUI = http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css
+	jQueryUI.external = 1
+}
+
+page.includeJSFooter {
+# uncomment if you do not have jQuery already installed
+#	jQuery = http://code.jquery.com/jquery-1.8.3.js
+#	jQuery.external = 1
+	jQueryUI = http://code.jquery.com/ui/1.9.2/jquery-ui.js
+	jQueryUI.external = 1
+}
+
+page.jsFooterInline {
+	10 = TEXT
+	10.value = $( ".accordion" ).accordion();
+}

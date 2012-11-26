@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-23T20:04:50Z" product-name="ak_accordion">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_akaccordion_domain_model_accordioncontent">
+				<source>Accordion Content</source>
+			</trans-unit>
+			<trans-unit id="tx_akaccordion_domain_model_accordioncontent.head">
+				<source>Head</source>
+			</trans-unit>
+			<trans-unit id="tx_akaccordion_domain_model_accordioncontent.bodytext">
+				<source>Bodytext</source>
+			</trans-unit>
+			<trans-unit id="tx_akaccordion_domain_model_accordioncontent.image">
+				<source>Image</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2012-11-23T20:04:50Z" product-name="ak_accordion">
+		<header/>
+		<body>
+
+			<trans-unit id="plugin_accordion">
+				<source>Accordion</source>
+			</trans-unit>
+			<trans-unit id="plugin_accordion_description">
+				<source>Inserts an Accordion with Text and Image</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
