@@ -18,8 +18,13 @@ $TCA['tt_content']['types'][$pluginSignature]['showitem'] = '
 		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.general;general,
 		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.header;header,
 		tx_akaccordion_accordion_content,
-		--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.visibility;visibility, --palette
---;LLL:EXT:cms/locallang_ttc.xml:palette.access;access';
+	--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.appearance,
+		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.frames;frames,
+		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.textlayout;textlayout,
+	--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,
+		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.visibility;visibility,
+		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.access;access,
+	--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.extended';
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_akaccordion_domain_model_accordioncontent', 'EXT:ak_accordion/Resources/Private/Language/locallang_csh_tx_akaccordion_domain_model_accordioncontent.xlf');
