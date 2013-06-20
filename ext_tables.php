@@ -5,15 +5,19 @@ if (!defined('TYPO3_MODE')) {
 
 $extensionName = 'akaccordion';
 
+#######################################
+# Accordion plugin start
+#######################################
 $pluginSignature = $extensionName . '_accordion';
+$pluginIcon = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/plugin_accordion.png';
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	$_EXTKEY,
 	'Accordion',
 	'Accordion',
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/plugin_accordion.png'
+	$pluginIcon
 );
+\TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('tt_content', $pluginSignature, $pluginIcon);
 
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Accordion');
 
 
 $TCA['tt_content']['types'][$pluginSignature]['showitem'] = '
@@ -27,6 +31,17 @@ $TCA['tt_content']['types'][$pluginSignature]['showitem'] = '
 		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.visibility;visibility,
 		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.access;access,
 	--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.extended';
+
+# cleanup variables
+unset($extensionName);
+unset($pluginIcon);
+unset($pluginSignature);
+#######################################
+# Accordion plugin end
+#######################################
+
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Accordion');
 
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_akaccordion_domain_model_accordioncontent', 'EXT:ak_accordion/Resources/Private/Language/locallang_csh_tx_akaccordion_domain_model_accordioncontent.xlf');
