@@ -16,6 +16,7 @@ $pluginIcon = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_E
 	'Accordion',
 	$pluginIcon
 );
+# show an icon in the page view
 \TYPO3\CMS\Backend\Sprite\SpriteManager::addTcaTypeIcon('tt_content', $pluginSignature, $pluginIcon);
 
 
