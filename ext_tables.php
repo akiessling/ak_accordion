@@ -15,11 +15,10 @@ $extensionName = 'akaccordion';
 
 $pluginSignature = $extensionName . '_accordion';
 $TCA['tt_content']['types'][$pluginSignature]['showitem'] = '
-        CType;;4;button;1-1-1,
-        header,
-        header_layout,
-        tx_akaccordion_accordion_content,
-        --div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.visibility;visibility, --palette
+		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.general;general,
+		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.header;header,
+		tx_akaccordion_accordion_content,
+		--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access, --palette--;LLL:EXT:cms/locallang_ttc.xml:palette.visibility;visibility, --palette
 --;LLL:EXT:cms/locallang_ttc.xml:palette.access;access';
 
 
