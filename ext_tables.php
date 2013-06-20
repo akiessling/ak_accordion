@@ -5,15 +5,17 @@ if (!defined('TYPO3_MODE')) {
 
 $extensionName = 'akaccordion';
 
+$pluginSignature = $extensionName . '_accordion';
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
 	$_EXTKEY,
 	'Accordion',
-	'Accordion'
+	'Accordion',
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/plugin_accordion.png'
 );
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Accordion');
 
-$pluginSignature = $extensionName . '_accordion';
+
 $TCA['tt_content']['types'][$pluginSignature]['showitem'] = '
 		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.general;general,
 		--palette--;LLL:EXT:cms/locallang_ttc.xml:palette.header;header,
